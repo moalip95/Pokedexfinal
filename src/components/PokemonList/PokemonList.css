@@ -1,0 +1,279 @@
+:root {
+  --normal-color: linear-gradient(to right, #a8a878, #a8a878);
+  --fire-color: linear-gradient(to right, #f08030, #ffcb4c);
+  --water-color: linear-gradient(to right, #6890f0, #83aeeb);
+  --electric-color: linear-gradient(to right, #f8d030, #ffd86f);
+  --grass-color: linear-gradient(to right, #78c850, #8bd093);
+  --ice-color: linear-gradient(to right, #98d8d8, #b3e0e0);
+  --fighting-color: linear-gradient(to right, #c03028, #eb7272);
+  --poison-color: linear-gradient(to right, #a040a0, #c678c6);
+  --ground-color: linear-gradient(to right, #e0c068, #ecc885);
+  --flying-color: linear-gradient(to right, #a890f0, #bca0e8);
+  --psychic-color: linear-gradient(to right, #f85888, #fca3b0);
+  --bug-color: linear-gradient(to right, #a8b820, #c4d130);
+  --rock-color: linear-gradient(to right, #b8a038, #cfc583);
+  --ghost-color: linear-gradient(to right, #705898, #7d67a3);
+  --dragon-color: linear-gradient(to right, #7038f8, #8b70f7);
+  --dark-color: linear-gradient(to right, #705848, #7c6b63);
+  --steel-color: linear-gradient(to right, #b8b8d0, #d3d3e3);
+  --fairy-color: linear-gradient(to right, #ee99ac, #ffb3c2);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-around; 
+  padding: 16px;
+}
+
+.filter-type {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.filter-type.normal {
+  background-color: var(--normal-color);
+  color: #333;
+}
+
+.filter-type.fire {
+  background-color: var(--fire-color);
+  color: #fff;
+}
+
+.filter-type.water {
+  background-color: var(--water-color);
+  color: #fff;
+}
+
+.filter-type.electric {
+  background-color: var(--electric-color);
+  color: #333;
+}
+
+.filter-type.grass {
+  background-color: var(--grass-color);
+  color: #333;
+}
+
+.filter-type.ice {
+  background-color: var(--ice-color);
+  color: #333;
+}
+
+.filter-type.fighting {
+  background-color: var(--fighting-color);
+  color: #fff;
+}
+
+.filter-type.poison {
+  background-color: var(--poison-color);
+  color: #fff;
+}
+
+.filter-type.ground {
+  background-color: var(--ground-color);
+  color: #333;
+}
+
+.filter-type.flying {
+  background-color: var(--flying-color);
+  color: #333;
+}
+
+.filter-type.psychic {
+  background-color: var(--psychic-color);
+  color: #333;
+}
+
+.filter-type.bug {
+  background-color: var(--bug-color);
+  color: #333;
+}
+
+.filter-type.rock {
+  background-color: var(--rock-color);
+  color: #333;
+}
+
+.filter-type.ghost {
+  background-color: var(--ghost-color);
+  color: #fff;
+}
+
+.filter-type.dragon {
+  background-color: var(--dragon-color);
+  color: #fff;
+}
+
+.filter-type.dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.filter-type.steel {
+  background-color: var(--steel-color);
+  color: #333;
+}
+
+.filter-type.fairy {
+  background-color: var(--fairy-color);
+  color: #333;
+}
+
+.pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.pokemon-tile {
+  flex: 0 0 calc(33.33% - 8px);
+  border: 4px solid;
+  background: var(--normal-color);
+  padding: 16px;
+  text-align: center;
+  margin-right: 16px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-tile:hover {
+  transform: scale(1.1);
+}
+
+.pokemon-tile h3 {
+  font-size: 2rem;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.pokemon-tile img {
+  max-width: 100%;
+  max-height: auto;
+  margin-bottom: 10px;
+}
+
+.pokemon-tile .caught-btn {
+  background-color: #ffdb58;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.pokemon-tile .caught-btn:disabled {
+  background-color: #caedcc;
+  cursor: not-allowed;
+}
+
+
+.pokemon-tile.fire {
+  border-image: var(--fire-color);
+  background: linear-gradient(45deg, #ffbf00, #ff0000);
+}
+
+.pokemon-tile.water {
+  border-image: var(--water-color);
+  background: linear-gradient(45deg, #aad4f2, #0077c8);
+}
+
+.pokemon-tile.electric {
+  border-image: var(--electric-color);
+  background: linear-gradient(45deg, #f4e93d, #dbbf25);
+}
+
+.pokemon-tile.grass {
+  border-image: var(--grass-color);
+  background: linear-gradient(45deg, #9ccc65, #5e8e3e);
+}
+
+.pokemon-tile.ice {
+  border-image: var(--ice-color);
+  background: linear-gradient(45deg, #b3e0e0, #66b2b2);
+}
+
+.pokemon-tile.fighting {
+  border-image: var(--fighting-color);
+  background: linear-gradient(45deg, #eb7272, #c03028);
+}
+
+.pokemon-tile.poison {
+  border-image: var(--poison-color);
+  background: linear-gradient(45deg, #c678c6, #a040a0);
+}
+
+.pokemon-tile.ground {
+  border-image: var(--ground-color);
+  background: linear-gradient(45deg, #ecc885, #e0c068);
+}
+
+.pokemon-tile.flying {
+  border-image: var(--flying-color);
+  background: linear-gradient(45deg, #bca0e8, #a890f0);
+}
+
+.pokemon-tile.psychic {
+  border-image: var(--psychic-color);
+  background: linear-gradient(45deg, #fca3b0, #f85888);
+}
+
+.pokemon-tile.bug {
+  border-image: var(--bug-color);
+  background: linear-gradient(45deg, #c4d130, #a8b820);
+}
+
+.pokemon-tile.rock {
+  border-image: var(--rock-color);
+  background: linear-gradient(45deg, #cfc583, #b8a038);
+}
+
+.pokemon-tile.ghost {
+  border-image: var(--ghost-color);
+  background: linear-gradient(45deg, #7d67a3, #705898);
+}
+
+.pokemon-tile.dragon {
+  border-image: var(--dragon-color);
+  background: linear-gradient(45deg, #8b70f7, #7038f8);
+}
+
+.pokemon-tile.dark {
+  border-image: var(--dark-color);
+  background: linear-gradient(45deg, #7c6b63, #705848);
+}
+
+.pokemon-tile.steel {
+  border-image: var(--steel-color);
+  background: linear-gradient(45deg, #d3d3e3, #b8b8d0);
+}
+
+.pokemon-tile.fairy {
+  border-image: var(--fairy-color);
+  background: linear-gradient(45deg, #ffb3c2, #ee99ac);
+}

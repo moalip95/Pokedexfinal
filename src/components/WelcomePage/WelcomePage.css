@@ -1,0 +1,76 @@
+body {
+  background-image: url('https://wallpapers.com/images/high/basic-pokeball-cover-mcs4xg2ash4hj4e9.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: 'PocketMonk';
+  src: url('/public/PocketMonk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.welcome-container {
+  text-align: center;
+  color: #FFCC00; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.welcome-container h1 {
+  font-family: 'PocketMonk';
+  font-size: 4em;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+.input-container input {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.button-container {
+  font-family: 'Slackey';
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.button-container button {
+  background-color: #FFCC00; 
+  color: #4E4E4E; 
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #4E4E4E; 
+  color: #FFCC00; 
+}
+
+.gif-container {
+  background-image: url('./pokeball gif.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px; 
+  width: 200px; 
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}

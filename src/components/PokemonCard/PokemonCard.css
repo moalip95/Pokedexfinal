@@ -1,0 +1,48 @@
+.pokemon-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+@font-face {
+  font-family: 'Slackey';
+  src: url('/public/Slackey-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pokemon-card h3 {
+  font-family: 'Slackey';
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.pokemon-card img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.pokemon-card .caught-btn {
+  background-color: #ffdb58;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-family: 'Slackey';
+  font-size: 1.5em;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.pokemon-card .caught-btn:disabled {
+  background-color: #caedcc;
+  cursor: not-allowed;
+}

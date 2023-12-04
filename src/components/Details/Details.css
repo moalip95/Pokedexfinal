@@ -1,0 +1,41 @@
+.details-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    z-index: 1000;
+    width: 600px; 
+  }
+  
+  .details-content {
+    text-align: center;
+  }
+  
+  .pokemon-image {
+    width: 400px; 
+    height: 400px; 
+    margin-bottom: 10px;
+  }
+
+  .details-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .details-content li {
+    margin-bottom: 5px;
+  }
+
+
+  .details-content h2,
+  .details-content p {
+    text-transform: capitalize;
+  }
+  
+  .details-content button {
+    margin-top: 10px;
+  }
+  
